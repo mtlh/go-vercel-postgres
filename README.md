@@ -5,18 +5,18 @@ Instructions on how to create an api layer with Go, all hosted on vercel and con
 <table>
   <tr>
     <td align="center">
-      <a href="https://www.postgresql.org/">
-        <img src="https://cdn.clever-cloud.com/uploads/2023/08/pgsql.svg" alt="Postgres" width="140">
+      <a href="https://go.dev/">
+        <img src="https://i.pinimg.com/564x/9c/1a/7b/9c1a7b98ba1e02023393846c9509c587.jpg" alt="Go" width="140">
       </a>
     </td>
-    <td align="center" style="background-color: white;">
+    <td align="center">
       <a href="https://vercel.com/">
         <img src="https://encore.dev/assets/resources/vercel_cover.jpg" alt="Vercel" width="140">
       </a>
     </td>
-    <td align="center" style="background-color: white;">
-      <a href="https://go.dev/">
-        <img src="https://i.pinimg.com/564x/9c/1a/7b/9c1a7b98ba1e02023393846c9509c587.jpg" alt="Go" width="140">
+    <td align="center">
+      <a href="https://www.postgresql.org/">
+        <img src="https://cdn.clever-cloud.com/uploads/2023/08/pgsql.svg" alt="Postgres" width="140">
       </a>
     </td>
   </tr>
