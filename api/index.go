@@ -2,21 +2,21 @@ package api
 
 import (
 	"encoding/json"
+	"go_vercel_test/types"
 	"net/http"
 )
 
-type Message struct {
-	Message string            `json:"message"`
-	Routes  map[string]string `json:"routes"`
-}
-
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 
-	msg := Message{
+	msg := types.Message{
 		Message: "Hello!",
 		Routes: map[string]string{
-			"/api":        "You are here.",
-			"/api/dbtest": "Return some test information from a connected postgres db.",
+			"/api":              "You are here.",
+			"/api/date":         "Current date.",
+			"/api/dbget":        "Return some all USERS table information from a connected postgres db.",
+			"/api/dbinsert/x":   "Insert into USERS table with name (x).",
+			"/api/dbdelete/y":   "Delete from USERS table with id (y).",
+			"/api/dbupdate/y/x": "Update from USERS table with id (y) and name (x).",
 		},
 	}
 

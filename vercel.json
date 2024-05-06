@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/dbinsert/:path*",
+            "destination": "/api/dbinsert.go"
+        },
+        {
+            "source": "/api/dbdelete/:path*",
+            "destination": "/api/dbdelete.go"
+        },
+        {
+            "source": "/api/dbupdate/:path*",
+            "destination": "/api/dbupdate.go"
+        }
+    ]
+}

@@ -3,17 +3,13 @@ package api
 import (
 	"encoding/json"
 	"go_vercel_test/db"
+	"go_vercel_test/types"
 	"net/http"
 
 	_ "github.com/lib/pq"
 )
 
-type User struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
-}
-
-func DBTestHandler(w http.ResponseWriter, r *http.Request) {
+func DBGetHandler(w http.ResponseWriter, r *http.Request) {
 
 	db.InitDB()
 	defer db.GetDB().Close()
@@ -24,9 +20,9 @@ func DBTestHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	defer rows.Close()
 	// Process query results
-	var users []User
+	var users []types.User
 	for rows.Next() {
-		var user User
+		var user types.User
 		if err := rows.Scan(&user.ID, &user.Name); err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
