@@ -1,6 +1,6 @@
 # Go + Vercel Functions + Postgres 
 
-Instructions on how to create an api layer with Go, all hosted on vercel and connecting to a postgres database.
+Instructions on how to create an API layer with Go and common usage routes, all hosted on vercel and connecting to a postgres database.
 
 <table>
   <tr>
@@ -29,10 +29,30 @@ Instructions on how to create an api layer with Go, all hosted on vercel and con
 <br>
 Index for application, holding basic application information.
 
-### /api/dbtest
-<a href="https://go-vercel-postgres.vercel.app/api/dbtest">https://go-vercel-postgres.vercel.app/api/dbtest</a>
+### /api/date
+<a href="https://go-vercel-postgres.vercel.app/api/date">https://go-vercel-postgres.vercel.app/api/date</a>
+<br>
+Get current date string.
+
+### /api/dbget
+<a href="https://go-vercel-postgres.vercel.app/api/dbget">https://go-vercel-postgres.vercel.app/api/dbget</a>
 <br>
 Connect to the postgres instance and retrieve id and name fields in the "USERS" table.
+
+### /api/dbdelete/id
+<a href="https://go-vercel-postgres.vercel.app/api/dbdelete/1">https://go-vercel-postgres.vercel.app/api/dbdelete/1</a>
+<br>
+Connect to the postgres instance and delete record using id variable in the "USERS" table.
+
+### /api/dbinsert/name
+<a href="https://go-vercel-postgres.vercel.app/api/dbinsert/testingname">https://go-vercel-postgres.vercel.app/api/dbinsert/testingname</a>
+<br>
+Connect to the postgres instance and insert record using name variable and incremented id, in the "USERS" table.
+
+### /api/dbupdate/id/name
+<a href="https://go-vercel-postgres.vercel.app/api/dbupdate/1/updatedname">https://go-vercel-postgres.vercel.app/api/1/updatedname</a>
+<br>
+Connect to the postgres instance and update record using name and id variables, in the "USERS" table.
 
 ## Getting Started
 
