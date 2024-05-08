@@ -1,32 +1,33 @@
 package api
 
 import (
-	"encoding/json"
-	"go_vercel_test/types"
 	"net/http"
 )
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-
-	msg := types.Message{
-		Message: "Hello!",
-		Routes: map[string]string{
-			"/api":              "You are here.",
-			"/api/date":         "Current date.",
-			"/api/dbget":        "Return some all USERS table information from a connected postgres db.",
-			"/api/dbinsert/x":   "Insert into USERS table with name (x).",
-			"/api/dbdelete/y":   "Delete from USERS table with id (y).",
-			"/api/dbupdate/y/x": "Update from USERS table with id (y) and name (x).",
-		},
-	}
-
-	jsonData, err := json.Marshal(msg)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "text/html")
 	w.WriteHeader(http.StatusOK)
-	w.Write(jsonData)
+	w.Write([]byte(
+		`
+        <!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Message Routes</title>
+		</head>
+		<body>
+			<h1>Message Routes</h1>
+			<p><strong>Message:</strong> Hello!</p>
+			<ul>
+				<li><code>/api</code>: You are here.</li>
+				<li><code>/api/date</code>: Current date.</li>
+				<li><code>/api/dbget</code>: Return some all USERS table information from a connected postgres db.</li>
+				<li><code>/api/dbinsert/x</code>: Insert into USERS table with name (x).</li>
+				<li><code>/api/dbdelete/y</code>: Delete from USERS table with id (y).</li>
+				<li><code>/api/dbupdate/y/x</code>: Update from USERS table with id (y) and name (x).</li>
+			</ul>
+		</body>
+		</html>
+        `))
 }
