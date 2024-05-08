@@ -24,7 +24,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 					color: #333;
 				}
 				.container {
-					max-width: 600px;
+					max-width: 800px;
 					margin: 20px auto;
 					padding: 20px;
 					background-color: #fff;
@@ -59,12 +59,18 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 			<div class="container">
 				<h1>API Routes</h1>
 				<ul>
-					<li><code><a href="/api">/api</a></code>: You are here.</li>
-					<li><code><a href="/api/date">/api/date</a></code>: Current date.</li>
-					<li><code><a href="/api/dbget">/api/dbget</a></code>: Return some all USERS table information from a connected postgres db.</li>
-					<li><code><a href="/api/dbinsert/x">/api/dbinsert/x</a></code>: Insert into USERS table with name (x).</li>
-					<li><code><a href="/api/dbdelete/y">/api/dbdelete/y</a></code>: Delete from USERS table with id (y).</li>
-					<li><code><a href="/api/dbupdate/y/x">/api/dbupdate/y/x</a></code>: Update from USERS table with id (y) and name (x).</li>
+					<li><code><a href="/api">/api</a></code></li>
+					<li>You are here.</li>
+					<li><code><a href="/api/date">/api/date</a></code></li>
+					<li>Current date.</li>
+					<li><code><a href="/api/dbget">/api/dbget</a></code></li>
+					<li>Return some all USERS table information from a connected postgres db.</li>
+					<li><code><a href="/api/dbinsert/demo">/api/dbinsert/x</a></code></li>
+					<li>Insert into USERS table with name (x).</li>
+					<li><code><a href="/api/dbdelete/4">/api/dbdelete/y</a></code></li>
+					<li>Delete from USERS table with id (y).</li>
+					<li><code><a href="/api/dbupdate/6/demo">/api/dbupdate/y/x</a></code></li>
+					<li>Update from USERS table with id (y) and name (x).</li>
 				</ul>
 			</div>
 		</body>
