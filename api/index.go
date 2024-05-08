@@ -14,19 +14,59 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		<head>
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Message Routes</title>
+			<title>API Routes</title>
+			<style>
+				body {
+					font-family: Arial, sans-serif;
+					margin: 0;
+					padding: 0;
+					background-color: #f4f4f4;
+					color: #333;
+				}
+				.container {
+					max-width: 600px;
+					margin: 20px auto;
+					padding: 20px;
+					background-color: #fff;
+					border-radius: 5px;
+					box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				}
+				h1 {
+					color: #007bff;
+				}
+				ul {
+					list-style: none;
+					padding: 0;
+				}
+				li {
+					margin-bottom: 10px;
+				}
+				code {
+					background-color: #f8f9fa;
+					padding: 2px 5px;
+					border-radius: 3px;
+				}
+				a {
+					color: #007bff;
+					text-decoration: none;
+				}
+				a:hover {
+					text-decoration: underline;
+				}
+			</style>
 		</head>
 		<body>
-			<h1>Message Routes</h1>
-			<p><strong>Message:</strong> Hello!</p>
-			<ul>
-				<li><code>/api</code>: You are here.</li>
-				<li><code>/api/date</code>: Current date.</li>
-				<li><code>/api/dbget</code>: Return some all USERS table information from a connected postgres db.</li>
-				<li><code>/api/dbinsert/x</code>: Insert into USERS table with name (x).</li>
-				<li><code>/api/dbdelete/y</code>: Delete from USERS table with id (y).</li>
-				<li><code>/api/dbupdate/y/x</code>: Update from USERS table with id (y) and name (x).</li>
-			</ul>
+			<div class="container">
+				<h1>API Routes</h1>
+				<ul>
+					<li><code><a href="/api">/api</a></code>: You are here.</li>
+					<li><code><a href="/api/date">/api/date</a></code>: Current date.</li>
+					<li><code><a href="/api/dbget">/api/dbget</a></code>: Return some all USERS table information from a connected postgres db.</li>
+					<li><code><a href="/api/dbinsert/x">/api/dbinsert/x</a></code>: Insert into USERS table with name (x).</li>
+					<li><code><a href="/api/dbdelete/y">/api/dbdelete/y</a></code>: Delete from USERS table with id (y).</li>
+					<li><code><a href="/api/dbupdate/y/x">/api/dbupdate/y/x</a></code>: Update from USERS table with id (y) and name (x).</li>
+				</ul>
+			</div>
 		</body>
 		</html>
         `))
